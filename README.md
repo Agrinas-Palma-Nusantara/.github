@@ -124,14 +124,6 @@ KEAMANAN       →   Kontrol proteksi data dan tata kelola akun
 
 <br />
 
-## Repositori publik
-
-Organisasi ini merupakan ruang publik rekayasa teknologi **PT Agrinas Palma Nusantara (Persero)**.
-
-Repositori publik memuat standar teknis, pustaka open-source, komponen UI, dan dokumentasi terbuka. Sistem operasional inti dan infrastruktur sensitif tetap dikelola secara privat sesuai standar keamanan korporasi.
-
-<br />
-
 <div align="center">
 
 ---
