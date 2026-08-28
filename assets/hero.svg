@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">Agrinas Palma Nusantara — Engineering the Digital Plantation</title>
+  <desc id="desc">Architectural technical banner representing digital systems connecting field operations across the Indonesian archipelago to headquarters.</desc>
+
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060E0A"/>
+      <stop offset="50%" stop-color="#0A1610"/>
+      <stop offset="100%" stop-color="#050C08"/>
+    </linearGradient>
+
+    <!-- Rail Gradient -->
+    <linearGradient id="heroRail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E3B341" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#34D399" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#34D399" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Technical Grid Pattern -->
+    <pattern id="heroGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1D392B" stroke-width="0.6" stroke-opacity="0.25"/>
+      <circle cx="16" cy="16" r="0.6" fill="#2E5A43" fill-opacity="0.3"/>
+    </pattern>
+
+    <!-- Particle Glow -->
+    <filter id="laserGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Spine Route -->
+    <path id="heroRoute" d="M120 276 H1080"/>
+
+    <style>
+      .mono { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+      @keyframes radarHero {
+        0% { r: 10px; opacity: 0.8; }
+        100% { r: 24px; opacity: 0; }
+      }
+      @keyframes softBlink {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+      .beacon-field {
+        animation: radarHero 3.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+        transform-origin: 120px 276px;
+      }
+      .beacon-hq {
+        animation: radarHero 3.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+        animation-delay: 1.7s;
+        transform-origin: 1080px 276px;
+      }
+      .live-pulse {
+        animation: softBlink 2.4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="1200" height="460" rx="14" fill="url(#heroBg)"/>
+  <rect width="1200" height="460" rx="14" fill="url(#heroGrid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="459" rx="13.5" fill="none" stroke="#1E382B" stroke-width="1"/>
+
+  <!-- Technical Corner Registration Crosshairs -->
+  <g stroke="#2C5640" stroke-width="1" opacity="0.6">
+    <path d="M24 16 V32 M16 24 H32"/>
+    <path d="M1176 16 V32 M1168 24 H1184"/>
+    <path d="M24 428 V444 M16 436 H32"/>
+    <path d="M1176 428 V444 M1168 436 H1184"/>
+  </g>
+
+  <!-- Header & Typography Lockup -->
+  <g transform="translate(64, 60)">
+    <!-- Organization Pill Badge -->
+    <g>
+      <rect width="310" height="24" rx="4" fill="#0C2016" stroke="#1F4733" stroke-width="0.8"/>
+      <circle cx="14" cy="12" r="3" fill="#4ADE80" class="live-pulse"/>
+      <text x="26" y="15.5" fill="#4ADE80" font-size="9.5" font-weight="700" letter-spacing="1.4" class="mono">PT AGRINAS PALMA NUSANTARA (PERSERO)</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="68" fill="#FFFFFF" font-size="38" font-weight="760" letter-spacing="-1" class="sans">Engineering the Digital Plantation</text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="100" fill="#84A792" font-size="14.5" class="sans">Architectural digital systems spanning field operations, geospatial intelligence, data lakehouses, and applied AI.</text>
+  </g>
+
+  <!-- Technical Lat/Long Metadata Coordinates -->
+  <g transform="translate(900, 60)" class="mono" font-size="9" fill="#486D58" letter-spacing="0.8" text-anchor="end">
+    <text x="236" y="16">LOC · INDONESIA ARCHIPELAGO</text>
+    <text x="236" y="32">STACK · CLOUD · EDGE · LAKEHOUSE</text>
+    <text x="236" y="48">GOVERNANCE · STATE ENTERPRISE</text>
+  </g>
+
+  <!-- Middle Divider Laser Rail -->
+  <line x1="64" y1="200" x2="1136" y2="200" stroke="#173425" stroke-width="1" stroke-dasharray="2 6"/>
+
+  <!-- ==================== FLOW BACKBONE (5 OPERATIONAL NODES) ==================== -->
+  
+  <!-- Main Horizontal Laser Track -->
+  <path d="M120 276 H1080" stroke="#11261B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M120 276 H1080" stroke="#1D4330" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M120 276 H1080" stroke="url(#heroRail)" stroke-width="1" stroke-dasharray="3 6" opacity="0.8"/>
+
+  <!-- Telemetry Motion Particle Packets -->
+  <circle r="3.5" fill="#FBBF24" filter="url(#laserGlow)">
+    <animateMotion dur="6.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
+      <mpath href="#heroRoute"/>
+    </animateMotion>
+  </circle>
+  <circle r="1.8" fill="#FEF08A" opacity="0.9">
+    <animateMotion dur="6.5s" begin="-0.06s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
+      <mpath href="#heroRoute"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="3" fill="#34D399" filter="url(#laserGlow)">
+    <animateMotion dur="6.5s" begin="-3.25s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
+      <mpath href="#heroRoute"/>
+    </animateMotion>
+  </circle>
+  <circle r="1.6" fill="#A7F3D0" opacity="0.85">
+    <animateMotion dur="6.5s" begin="-3.31s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
+      <mpath href="#heroRoute"/>
+    </animateMotion>
+  </circle>
+
+  <!-- 01: FIELD -->
+  <g transform="translate(120, 276)">
+    <circle r="10" fill="none" stroke="#E3B341" stroke-width="1" class="beacon-field"/>
+    <circle r="14" fill="#0C1A13" stroke="#E3B341" stroke-width="1.4"/>
+    <circle r="8" fill="#143224" stroke="#37684C" stroke-width="0.8"/>
+    <circle r="3" fill="#FBBF24"/>
+    <g class="mono" text-anchor="middle">
+      <text y="-22" fill="#D97706" font-size="8.5" font-weight="700">01</text>
+      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">FIELD</text>
+      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">IoT · Harvesters</text>
+    </g>
+  </g>
+
+  <!-- 02: ESTATE -->
+  <g transform="translate(360, 276)">
+    <circle r="13" fill="#0C1A13" stroke="#2B6145" stroke-width="1.2"/>
+    <circle r="7" fill="#143224" stroke="#2C5A41" stroke-width="0.8"/>
+    <circle r="2.5" fill="#34D399"/>
+    <g class="mono" text-anchor="middle">
+      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">02</text>
+      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">ESTATE</text>
+      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Mill &amp; Grading</text>
+    </g>
+  </g>
+
+  <!-- 03: DISTRICT -->
+  <g transform="translate(600, 276)">
+    <circle r="14" fill="#0E2218" stroke="#34D399" stroke-width="1.4"/>
+    <circle r="8" fill="#163C2B" stroke="#3E805E" stroke-width="0.8"/>
+    <circle r="3" fill="#4ADE80"/>
+    <g class="mono" text-anchor="middle">
+      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">03</text>
+      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">DISTRICT</text>
+      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Cluster Relay</text>
+    </g>
+  </g>
+
+  <!-- 04: REGION -->
+  <g transform="translate(840, 276)">
+    <circle r="13" fill="#0C1A13" stroke="#2B6145" stroke-width="1.2"/>
+    <circle r="7" fill="#143224" stroke="#2C5A41" stroke-width="0.8"/>
+    <circle r="2.5" fill="#34D399"/>
+    <g class="mono" text-anchor="middle">
+      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">04</text>
+      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">REGION</text>
+      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Operations Hub</text>
+    </g>
+  </g>
+
+  <!-- 05: HEAD OFFICE -->
+  <g transform="translate(1080, 276)">
+    <circle r="10" fill="none" stroke="#38BDF8" stroke-width="1" class="beacon-hq"/>
+    <circle r="14" fill="#0C1A13" stroke="#38BDF8" stroke-width="1.4"/>
+    <circle r="8" fill="#142B36" stroke="#2E5C6E" stroke-width="0.8"/>
+    <circle r="3" fill="#38BDF8"/>
+    <g class="mono" text-anchor="middle">
+      <text y="-22" fill="#38BDF8" font-size="8.5" font-weight="700">05</text>
+      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">HEAD OFFICE</text>
+      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Executive ERP</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM ARCHITECTURAL CAPABILITY DOCK ==================== -->
+  <g transform="translate(64, 386)" class="mono" font-size="9.5" font-weight="600" letter-spacing="1">
+    <!-- 01 -->
+    <g transform="translate(0, 0)">
+      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="2.5" fill="#E3B341"/>
+      <text x="26" y="20.5" fill="#CBD5E1">OPERATIONS</text>
+      <text x="110" y="20.5" fill="#587A67" font-size="8.5">· EDGE</text>
+    </g>
+    <!-- 02 -->
+    <g transform="translate(210, 0)">
+      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="2.5" fill="#34D399"/>
+      <text x="26" y="20.5" fill="#CBD5E1">GEOSPATIAL</text>
+      <text x="110" y="20.5" fill="#587A67" font-size="8.5">· GIS</text>
+    </g>
+    <!-- 03 -->
+    <g transform="translate(420, 0)">
+      <rect width="215" height="34" rx="4" fill="#0F281C" stroke="#2C6445" stroke-width="1"/>
+      <circle cx="16" cy="17" r="2.5" fill="#4ADE80"/>
+      <text x="26" y="20.5" fill="#ECFDF5">DATA &amp; APPLIED AI</text>
+    </g>
+    <!-- 04 -->
+    <g transform="translate(650, 0)">
+      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="2.5" fill="#34D399"/>
+      <text x="26" y="20.5" fill="#CBD5E1">ENTERPRISE</text>
+      <text x="112" y="20.5" fill="#587A67" font-size="8.5">· ERP</text>
+    </g>
+    <!-- 05 -->
+    <g transform="translate(860, 0)">
+      <rect width="212" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
+      <circle cx="16" cy="17" r="2.5" fill="#38BDF8"/>
+      <text x="26" y="20.5" fill="#CBD5E1">PLATFORM &amp; SEC</text>
+      <text x="144" y="20.5" fill="#587A67" font-size="8.5">· MESH</text>
+    </g>
+  </g>
+
+</svg>
