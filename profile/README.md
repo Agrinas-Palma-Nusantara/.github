@@ -4,9 +4,9 @@
 
 # Agrinas Engineering
 
-**Kami bikin software untuk pekerjaan yang benar-benar jalan di kebun.**
+**Membangun platform digital untuk mendukung operasi perkebunan yang terhubung, terukur, dan berbasis data.**
 
-Dari budgeting, aset, dan aktivitas lapangan sampai peta, data, workflow kantor pusat, dan AI.
+Tim Engineering PT Agrinas Palma Nusantara mengembangkan sistem untuk operasional perkebunan, geospasial, proses enterprise, data, dan AI. Fokus kami adalah menghadirkan solusi yang andal, mudah dipelihara, serta relevan dengan kebutuhan kerja dari lapangan hingga kantor pusat.
 
 [Website](https://agrinaspalma.co.id/) · [LinkedIn](https://www.linkedin.com/company/agrinas-palma-nusantara/) · [Instagram](https://www.instagram.com/agrinaspalma/) · [X / Twitter](https://x.com/agrinas_palma)
 
@@ -21,25 +21,25 @@ Dari budgeting, aset, dan aktivitas lapangan sampai peta, data, workflow kantor 
 <td width="50%" valign="top">
 
 ### Operasional
-Perencanaan, budgeting, aset, logistik, dan aktivitas lapangan. Hal-hal yang harus tetap jalan walau situasi di lapangan nggak selalu ideal.
+Sistem untuk perencanaan, budgeting, aset, logistik, dan aktivitas lapangan yang mendukung proses kerja kebun secara konsisten dan terukur.
 
 ### Geospasial
-Peta, GIS, data lahan, dan konteks spasial. Supaya keputusan nggak cuma berhenti di spreadsheet.
+Peta, GIS, data lahan, dan analisis spasial untuk memperkuat konteks lokasi dalam pengambilan keputusan operasional.
 
 ### Enterprise
-Approval, dokumen, reporting, dan workflow lintas unit. Banyak proses kecil yang kalau nggak disambung dengan benar bisa bikin kerjaan tersendat.
+Platform untuk approval, dokumen, reporting, dan workflow lintas unit agar proses bisnis lebih terhubung dan mudah ditelusuri.
 
 </td>
 <td width="50%" valign="top">
 
 ### Data + AI
-Pipeline data, analytics, semantic search, document intelligence, dan AI yang dipakai buat ngurangin kerja manual yang nggak perlu.
+Pipeline data, analytics, semantic search, document intelligence, dan AI terapan untuk mempercepat akses informasi serta mengurangi pekerjaan manual.
 
 ### Platform
-API, cloud, database, observability, CI/CD, security, dan reliability. Bagian yang biasanya nggak kelihatan, tapi kerasa banget kalau bermasalah.
+API, cloud, database, observability, CI/CD, security, dan reliability sebagai fondasi layanan digital yang stabil dan berkelanjutan.
 
-### Intinya
-Kami lebih tertarik bikin sistem yang kepakai daripada sekadar kelihatan modern di diagram.
+### Pendekatan kami
+Teknologi dipilih berdasarkan kebutuhan operasional, maintainability, keamanan, dan kemampuan tim untuk mengembangkan sistem secara berkelanjutan.
 
 </td>
 </tr>
@@ -51,33 +51,65 @@ Kami lebih tertarik bikin sistem yang kepakai daripada sekadar kelihatan modern 
 
 <img src="./assets/ops-network.svg" width="100%" alt="Jaringan operasional Agrinas dari lapangan sampai kantor pusat" />
 
-Sistemnya beda-beda, tapi alurnya nyambung. Data dari lapangan naik ke level berikutnya, keputusan turun lagi ke operasi, dan semuanya perlu jejak yang jelas.
+Arsitektur dan aplikasi dapat berbeda di setiap domain, tetapi aliran data dan proses tetap perlu terhubung. Informasi bergerak dari lapangan ke level pengelolaan berikutnya, sementara keputusan dan tindak lanjut kembali ke operasi dengan jejak proses yang jelas.
 
 ---
 
-## Teknologi yang sering kepakai
+## Teknologi yang kami gunakan
 
-<div align="center">
+Pemilihan stack mengikuti kebutuhan produk dan karakter sistem. Beberapa teknologi dan framework yang paling sering kami gunakan antara lain:
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,python,fastapi,postgres,docker,aws,git,githubactions&theme=dark&perline=11">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,python,fastapi,postgres,docker,aws,git,githubactions&theme=light&perline=11">
-  <img alt="Engineering stack Agrinas" src="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,python,fastapi,postgres,docker,aws,git,githubactions&theme=dark&perline=11">
-</picture>
+### Web & Frontend
 
-</div>
+<p>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TanStack-FF4154?style=flat-square&logo=reactquery&logoColor=white" alt="TanStack" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Material_UI-007FFF?style=flat-square&logo=mui&logoColor=white" alt="Material UI" />
+</p>
 
-Stack bisa berubah. Yang kami jaga tetap sama: gampang dipahami, gampang dipantau, aman, dan masuk akal buat dirawat tim.
+### Backend & API
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" alt="NestJS" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
+  <img src="https://img.shields.io/badge/Odoo-714B67?style=flat-square&logo=odoo&logoColor=white" alt="Odoo" />
+</p>
+
+### Mobile
+
+<p>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+</p>
+
+### Data & Platform
+
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/pgvector-4169E1?style=flat-square" alt="pgvector" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+</p>
+
+Stack dapat berkembang mengikuti kebutuhan. Prinsip yang kami jaga tetap sama: arsitektur yang mudah dipahami, sistem yang dapat dipantau, keamanan sejak awal, dan teknologi yang realistis untuk dipelihara oleh tim.
 
 ---
 
 ## Cara kami kerja
 
-- Pahami prosesnya sebelum gambar arsitekturnya.
-- Kalau teknologi yang sederhana cukup, pakai yang sederhana.
-- Security dan observability masuk dari awal, bukan tempelan terakhir.
-- Otomatiskan hal repetitif yang bikin orang buang waktu.
-- Rilis kecil, lihat hasilnya, lalu benahi.
+- Memahami proses bisnis dan kebutuhan operasional sebelum menentukan arsitektur.
+- Memilih pendekatan yang sederhana ketika sudah cukup untuk menyelesaikan masalah.
+- Menempatkan security dan observability sebagai bagian dari desain sejak awal.
+- Mengotomatisasi pekerjaan repetitif yang tidak memberikan nilai tambah.
+- Merilis perubahan secara bertahap, mengamati hasilnya, lalu melakukan perbaikan.
 
 <img src="./assets/engineering-rhythm.svg" width="100%" alt="Build observe improve" />
 
