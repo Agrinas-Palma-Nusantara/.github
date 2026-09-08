@@ -1,72 +1,100 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Agrinas Engineering — software for plantations at scale" />
+<img src="./assets/hero.svg" width="100%" alt="Agrinas Engineering, rekayasa perangkat lunak untuk operasional perkebunan" />
 
 </div>
 
 # Agrinas Engineering
 
-We build software for plantation operations at scale — from field workflows and geospatial systems to enterprise platforms, data infrastructure, and applied AI.
+Kami membangun perangkat lunak untuk operasional perkebunan dalam skala besar.
 
-[Website](https://agrinaspalma.co.id/) · [LinkedIn](https://www.linkedin.com/company/agrinas-palma-nusantara/) · [Instagram](https://www.instagram.com/agrinaspalma/) · [X / Twitter](https://x.com/agrinas_palma)
+Mulai dari alur kerja lapangan, sistem geospasial, platform internal, fondasi data, sampai AI terapan. Fokus kami sederhana: sistem yang benar-benar dipakai, mudah ditelusuri, dan kuat menghadapi operasi nyata.
+
+<p>
+  <a href="https://agrinaspalma.co.id/">Website</a> ·
+  <a href="https://www.linkedin.com/company/agrinas-palma-nusantara/">LinkedIn</a> ·
+  <a href="https://www.instagram.com/agrinaspalma/">Instagram</a> ·
+  <a href="https://x.com/agrinas_palma">X / Twitter</a>
+</p>
 
 ---
 
-## 01 / What we build
+## 01 / Yang kami bangun
 
-**Operations** — Tools that move work from the field without turning every handoff into spreadsheet ping-pong.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**Geo** — Spatial systems for land, maps, boundaries, drone outputs, and field intelligence.
+### Operasional
+Aplikasi untuk perencanaan, budgeting, pelaksanaan kegiatan, aset, logistik, dan alur kerja harian.
 
-**Enterprise** — Internal platforms for planning, workflows, assets, documents, and the critical back-office stuff that keeps the operation moving.
+### Enterprise
+Platform internal untuk approval, pelaporan, koordinasi lintas unit, dan tata kelola proses bisnis.
 
-**Data + AI** — Search, analytics, document intelligence, automation, and AI where it earns its keep.
+### Geospasial
+Sistem peta, data lahan, analisis spasial, dan visibilitas lapangan untuk mendukung keputusan operasional.
 
-**Platform** — Cloud, APIs, databases, observability, security, and the plumbing behind all of it.
+</td>
+<td width="50%" valign="top">
 
-<br />
+### Data + AI
+Pipeline data, fondasi lakehouse, analitik, document intelligence, dan AI terapan.
 
-## 02 / One system, end to end
+### Platform
+API, cloud infrastructure, observability, reliability, security, dan developer tooling.
 
-<img src="./assets/digital-plantation.svg" width="100%" alt="Agrinas field-to-head-office system topology" />
+### Kenapa ini penting
+Lebih sedikit handoff manual. Data lebih konsisten. Koordinasi lebih cepat. Jejak proses lebih jelas.
 
-`field -> estate -> district -> region -> head office`
+</td>
+</tr>
+</table>
 
-One operational chain. Shared data. Less handoff friction. Better traceability.
+---
 
-<br />
+## 02 / Peta sistem
 
-## 03 / How we build
+<img src="./assets/digital-plantation.svg" width="100%" alt="Peta sistem Agrinas Engineering dari lapangan sampai kantor pusat" />
 
-```text
-domain > abstraction
-reliability > novelty
-security != afterthought
-observe what we ship
-automate the repetitive stuff
-ship -> learn -> improve
+`lapangan -> estate -> distrik -> region -> kantor pusat`
+
+Satu rantai operasional, satu aliran data, dan visibilitas yang lebih baik di tiap level.
+
+---
+
+## 03 / Cara kami membangun
+
+```txt
+domain > abstraksi
+keandalan > kebaruan
+keamanan bukan tambahan belakangan
+ukur apa yang dikirim
+otomatiskan pekerjaan berulang
+rilis -> belajar -> benahi
 ```
 
-We like boring technology when boring technology works. New things are welcome when they solve a real problem — not just because they're new.
+Kami lebih suka teknologi yang jelas gunanya.
 
-Good software here has to work on Monday morning, not only in an architecture diagram.
+Biasanya itu berarti arsitektur yang masuk akal, antarmuka yang rapi, observability yang baik, dan software yang tahan terhadap workflow nyata, data nyata, dan constraint nyata.
 
-<br />
+---
 
-## 04 / Around here
+## 04 / Sekitar kami
 
-Most days you'll find us around `TypeScript`, `Python`, `PostgreSQL`, `GIS`, cloud infrastructure, data pipelines, and applied AI.
+`TypeScript` · `Python` · `PostgreSQL` · `GIS` · `Cloud` · `APIs` · `Data Pipelines` · `AI`
 
-We build for people who actually run the operation, so the software has to survive real workflows, real data, and real constraints.
+Sehari-hari kami membangun produk internal, menghubungkan sistem, merapikan aliran data, dan mengubah kompleksitas operasional menjadi software yang benar-benar berguna.
+
+> Software yang bagus harus tetap jalan di Senin pagi, bukan cuma terlihat bagus di diagram arsitektur.
 
 ---
 
 <div align="center">
 
-**PT Agrinas Palma Nusantara (Persero)**
+### PT Agrinas Palma Nusantara (Persero)
 
-Plantation · Software · Data · Indonesia
+Perkebunan · Software · Data · Indonesia
 
-[agrinaspalma.co.id](https://agrinaspalma.co.id/)
+<a href="https://agrinaspalma.co.id/">agrinaspalma.co.id</a>
 
 </div>
