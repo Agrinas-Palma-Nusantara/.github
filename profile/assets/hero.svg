@@ -1,235 +1,182 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
-  <title id="title">Agrinas Palma Nusantara — Engineering the Digital Plantation</title>
-  <desc id="desc">Architectural technical banner representing digital systems connecting field operations across the Indonesian archipelago to headquarters.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Agrinas Engineering — Software for plantations at scale</title>
+  <desc id="desc">Animated engineering banner connecting field, estate, district, region, and head office through a shared digital backbone.</desc>
 
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060E0A"/>
-      <stop offset="50%" stop-color="#0A1610"/>
-      <stop offset="100%" stop-color="#050C08"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#0b1116"/>
+      <stop offset="100%" stop-color="#08110d"/>
     </linearGradient>
 
-    <!-- Rail Gradient -->
-    <linearGradient id="heroRail" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#E3B341" stop-opacity="0.5"/>
-      <stop offset="30%" stop-color="#34D399" stop-opacity="0.7"/>
-      <stop offset="70%" stop-color="#34D399" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.5"/>
+    <radialGradient id="wash" cx="0.18" cy="0.08" r="0.9">
+      <stop offset="0%" stop-color="#12351f" stop-opacity="0.42"/>
+      <stop offset="45%" stop-color="#0d1117" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="busGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d29922"/>
+      <stop offset="35%" stop-color="#3fb950"/>
+      <stop offset="70%" stop-color="#3fb950"/>
+      <stop offset="100%" stop-color="#58a6ff"/>
     </linearGradient>
 
-    <!-- Technical Grid Pattern -->
-    <pattern id="heroGrid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#1D392B" stroke-width="0.6" stroke-opacity="0.25"/>
-      <circle cx="16" cy="16" r="0.6" fill="#2E5A43" fill-opacity="0.3"/>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#30363d" stroke-width="0.7" stroke-opacity="0.16"/>
+      <circle cx="20" cy="20" r="0.7" fill="#8b949e" fill-opacity="0.12"/>
     </pattern>
 
-    <!-- Particle Glow -->
-    <filter id="laserGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Spine Route -->
-    <path id="heroRoute" d="M120 276 H1080"/>
+    <path id="heroBus" d="M100 305H1100"/>
 
     <style>
-      .mono { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 
-      @keyframes radarHero {
-        0% { r: 10px; opacity: 0.8; }
-        100% { r: 24px; opacity: 0; }
+      @keyframes blink {
+        0%, 46% { opacity: 1; }
+        47%, 100% { opacity: 0; }
       }
-      @keyframes softBlink {
-        0%, 100% { opacity: 0.35; }
-        50% { opacity: 1; }
+
+      @keyframes breathe {
+        0%, 100% { opacity: .28; transform: scale(.9); }
+        50% { opacity: .7; transform: scale(1.15); }
       }
-      .beacon-field {
-        animation: radarHero 3.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-        transform-origin: 120px 276px;
+
+      @keyframes dash {
+        to { stroke-dashoffset: -220; }
       }
-      .beacon-hq {
-        animation: radarHero 3.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
-        animation-delay: 1.7s;
-        transform-origin: 1080px 276px;
+
+      @keyframes scan {
+        0% { transform: translateX(-180px); opacity: 0; }
+        12% { opacity: .12; }
+        50% { opacity: .06; }
+        88% { opacity: .12; }
+        100% { transform: translateX(1320px); opacity: 0; }
       }
-      .live-pulse {
-        animation: softBlink 2.4s ease-in-out infinite;
-      }
+
+      .cursor { animation: blink 1.1s steps(1, end) infinite; }
+      .flow { animation: dash 12s linear infinite; }
+      .pulse { animation: breathe 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .pulse.delay-1 { animation-delay: .7s; }
+      .pulse.delay-2 { animation-delay: 1.4s; }
+      .scan { animation: scan 10s linear infinite; }
     </style>
   </defs>
 
-  <!-- Frame Background -->
-  <rect width="1200" height="460" rx="14" fill="url(#heroBg)"/>
-  <rect width="1200" height="460" rx="14" fill="url(#heroGrid)"/>
-  <rect x="0.5" y="0.5" width="1199" height="459" rx="13.5" fill="none" stroke="#1E382B" stroke-width="1"/>
+  <rect width="1200" height="430" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="430" rx="16" fill="url(#wash)"/>
+  <rect width="1200" height="430" rx="16" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="429" rx="15.5" fill="none" stroke="#30363d"/>
 
-  <!-- Technical Corner Registration Crosshairs -->
-  <g stroke="#2C5640" stroke-width="1" opacity="0.6">
-    <path d="M24 16 V32 M16 24 H32"/>
-    <path d="M1176 16 V32 M1168 24 H1184"/>
-    <path d="M24 428 V444 M16 436 H32"/>
-    <path d="M1176 428 V444 M1168 436 H1184"/>
+  <g opacity=".7" stroke="#3fb950" stroke-width="1">
+    <path d="M24 16V32M16 24H32"/>
+    <path d="M1176 16V32M1168 24H1184"/>
+    <path d="M24 398V414M16 406H32"/>
+    <path d="M1176 398V414M1168 406H1184"/>
   </g>
 
-  <!-- Header & Typography Lockup -->
-  <g transform="translate(64, 60)">
-    <!-- Organization Pill Badge -->
-    <g>
-      <rect width="310" height="24" rx="4" fill="#0C2016" stroke="#1F4733" stroke-width="0.8"/>
-      <circle cx="14" cy="12" r="3" fill="#4ADE80" class="live-pulse"/>
-      <text x="26" y="15.5" fill="#4ADE80" font-size="9.5" font-weight="700" letter-spacing="1.4" class="mono">PT AGRINAS PALMA NUSANTARA (PERSERO)</text>
-    </g>
+  <rect class="scan" x="0" y="0" width="120" height="430" fill="#3fb950" opacity="0.04"/>
 
-    <!-- Main Title -->
-    <text x="0" y="68" fill="#FFFFFF" font-size="38" font-weight="760" letter-spacing="-1" class="sans">Engineering the Digital Plantation</text>
+  <g transform="translate(58 48)">
+    <text class="mono" x="0" y="0" fill="#3fb950" font-size="12" font-weight="700" letter-spacing="1.8">AGRINAS / ENGINEERING</text>
+    <rect class="cursor" x="185" y="-11" width="7" height="13" rx="1" fill="#3fb950"/>
 
-    <!-- Subtitle Description -->
-    <text x="0" y="100" fill="#84A792" font-size="14.5" class="sans">Architectural digital systems spanning field operations, geospatial intelligence, data lakehouses, and applied AI.</text>
+    <text class="sans" x="0" y="73" fill="#f0f6fc" font-size="50" font-weight="750" letter-spacing="-1.8">We build software</text>
+    <text class="sans" x="0" y="129" fill="#f0f6fc" font-size="50" font-weight="750" letter-spacing="-1.8">for plantations at scale.</text>
+
+    <text class="sans" x="0" y="172" fill="#8b949e" font-size="16">
+      Field operations, geospatial systems, enterprise platforms, data infrastructure, and applied AI.
+    </text>
   </g>
 
-  <!-- Technical Lat/Long Metadata Coordinates -->
-  <g transform="translate(900, 60)" class="mono" font-size="9" fill="#486D58" letter-spacing="0.8" text-anchor="end">
-    <text x="236" y="16">LOC · INDONESIA ARCHIPELAGO</text>
-    <text x="236" y="32">STACK · CLOUD · EDGE · LAKEHOUSE</text>
-    <text x="236" y="48">GOVERNANCE · STATE ENTERPRISE</text>
+  <g transform="translate(884 46)">
+    <text class="mono" x="0" y="0" fill="#6e7681" font-size="10" letter-spacing="1.4">SYSTEM PATH</text>
+    <text class="mono" x="0" y="24" fill="#8b949e" font-size="11">field   -&gt;  estate</text>
+    <text class="mono" x="0" y="42" fill="#8b949e" font-size="11">district -&gt;  region</text>
+    <text class="mono" x="0" y="60" fill="#8b949e" font-size="11">region   -&gt;  head office</text>
   </g>
 
-  <!-- Middle Divider Laser Rail -->
-  <line x1="64" y1="200" x2="1136" y2="200" stroke="#173425" stroke-width="1" stroke-dasharray="2 6"/>
+  <g>
+    <path d="M100 305H1100" stroke="#21262d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M100 305H1100" stroke="#30363d" stroke-width="1.2" stroke-linecap="round"/>
+    <path class="flow" d="M100 305H1100" stroke="url(#busGradient)" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="8 14" opacity=".75"/>
+  </g>
 
-  <!-- ==================== FLOW BACKBONE (5 OPERATIONAL NODES) ==================== -->
-  
-  <!-- Main Horizontal Laser Track -->
-  <path d="M120 276 H1080" stroke="#11261B" stroke-width="4" stroke-linecap="round"/>
-  <path d="M120 276 H1080" stroke="#1D4330" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M120 276 H1080" stroke="url(#heroRail)" stroke-width="1" stroke-dasharray="3 6" opacity="0.8"/>
-
-  <!-- Telemetry Motion Particle Packets -->
-  <circle r="3.5" fill="#FBBF24" filter="url(#laserGlow)">
-    <animateMotion dur="6.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
-      <mpath href="#heroRoute"/>
+  <circle r="4.2" fill="#3fb950" filter="url(#glow)">
+    <animateMotion dur="7s" repeatCount="indefinite">
+      <mpath href="#heroBus"/>
     </animateMotion>
   </circle>
-  <circle r="1.8" fill="#FEF08A" opacity="0.9">
-    <animateMotion dur="6.5s" begin="-0.06s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
-      <mpath href="#heroRoute"/>
+  <circle r="3.2" fill="#58a6ff" filter="url(#glow)">
+    <animateMotion dur="7s" begin="-3.5s" repeatCount="indefinite">
+      <mpath href="#heroBus"/>
     </animateMotion>
   </circle>
 
-  <circle r="3" fill="#34D399" filter="url(#laserGlow)">
-    <animateMotion dur="6.5s" begin="-3.25s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
-      <mpath href="#heroRoute"/>
-    </animateMotion>
-  </circle>
-  <circle r="1.6" fill="#A7F3D0" opacity="0.85">
-    <animateMotion dur="6.5s" begin="-3.31s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines="0.25 0.1 0.25 1">
-      <mpath href="#heroRoute"/>
-    </animateMotion>
-  </circle>
+  <g class="sans" text-anchor="middle">
+    <g transform="translate(100 305)">
+      <circle class="pulse" r="17" fill="none" stroke="#d29922" stroke-width="1"/>
+      <circle r="8" fill="#0d1117" stroke="#d29922" stroke-width="1.5"/>
+      <circle r="3" fill="#d29922"/>
+      <text y="34" fill="#f0f6fc" font-size="11" font-weight="700">FIELD</text>
+      <text y="50" fill="#6e7681" font-size="9">edge ops</text>
+    </g>
 
-  <!-- 01: FIELD -->
-  <g transform="translate(120, 276)">
-    <circle r="10" fill="none" stroke="#E3B341" stroke-width="1" class="beacon-field"/>
-    <circle r="14" fill="#0C1A13" stroke="#E3B341" stroke-width="1.4"/>
-    <circle r="8" fill="#143224" stroke="#37684C" stroke-width="0.8"/>
-    <circle r="3" fill="#FBBF24"/>
-    <g class="mono" text-anchor="middle">
-      <text y="-22" fill="#D97706" font-size="8.5" font-weight="700">01</text>
-      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">FIELD</text>
-      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">IoT · Harvesters</text>
+    <g transform="translate(350 305)">
+      <circle class="pulse delay-1" r="16" fill="none" stroke="#3fb950" stroke-width="1"/>
+      <circle r="8" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <circle r="3" fill="#3fb950"/>
+      <text y="34" fill="#f0f6fc" font-size="11" font-weight="700">ESTATE</text>
+      <text y="50" fill="#6e7681" font-size="9">operations</text>
+    </g>
+
+    <g transform="translate(600 305)">
+      <circle class="pulse delay-2" r="16" fill="none" stroke="#3fb950" stroke-width="1"/>
+      <circle r="8" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <circle r="3" fill="#3fb950"/>
+      <text y="34" fill="#f0f6fc" font-size="11" font-weight="700">DISTRICT</text>
+      <text y="50" fill="#6e7681" font-size="9">coordination</text>
+    </g>
+
+    <g transform="translate(850 305)">
+      <circle class="pulse delay-1" r="16" fill="none" stroke="#3fb950" stroke-width="1"/>
+      <circle r="8" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <circle r="3" fill="#3fb950"/>
+      <text y="34" fill="#f0f6fc" font-size="11" font-weight="700">REGION</text>
+      <text y="50" fill="#6e7681" font-size="9">oversight</text>
+    </g>
+
+    <g transform="translate(1100 305)">
+      <circle class="pulse delay-2" r="17" fill="none" stroke="#58a6ff" stroke-width="1"/>
+      <circle r="8" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
+      <circle r="3" fill="#58a6ff"/>
+      <text y="34" fill="#f0f6fc" font-size="11" font-weight="700">HEAD OFFICE</text>
+      <text y="50" fill="#6e7681" font-size="9">enterprise</text>
     </g>
   </g>
 
-  <!-- 02: ESTATE -->
-  <g transform="translate(360, 276)">
-    <circle r="13" fill="#0C1A13" stroke="#2B6145" stroke-width="1.2"/>
-    <circle r="7" fill="#143224" stroke="#2C5A41" stroke-width="0.8"/>
-    <circle r="2.5" fill="#34D399"/>
-    <g class="mono" text-anchor="middle">
-      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">02</text>
-      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">ESTATE</text>
-      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Mill &amp; Grading</text>
-    </g>
-  </g>
+  <g transform="translate(58 397)" class="mono" font-size="10">
+    <text x="0" y="0" fill="#6e7681">apps</text>
+    <text x="46" y="0" fill="#30363d">/</text>
+    <text x="62" y="0" fill="#8b949e">api</text>
+    <text x="92" y="0" fill="#30363d">/</text>
+    <text x="108" y="0" fill="#8b949e">postgres</text>
+    <text x="174" y="0" fill="#30363d">/</text>
+    <text x="190" y="0" fill="#8b949e">geo</text>
+    <text x="222" y="0" fill="#30363d">/</text>
+    <text x="238" y="0" fill="#8b949e">cloud</text>
+    <text x="280" y="0" fill="#30363d">/</text>
+    <text x="296" y="0" fill="#8b949e">ai</text>
 
-  <!-- 03: DISTRICT -->
-  <g transform="translate(600, 276)">
-    <circle r="14" fill="#0E2218" stroke="#34D399" stroke-width="1.4"/>
-    <circle r="8" fill="#163C2B" stroke="#3E805E" stroke-width="0.8"/>
-    <circle r="3" fill="#4ADE80"/>
-    <g class="mono" text-anchor="middle">
-      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">03</text>
-      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">DISTRICT</text>
-      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Cluster Relay</text>
-    </g>
+    <text x="1076" y="0" fill="#3fb950" text-anchor="end">INDONESIA</text>
   </g>
-
-  <!-- 04: REGION -->
-  <g transform="translate(840, 276)">
-    <circle r="13" fill="#0C1A13" stroke="#2B6145" stroke-width="1.2"/>
-    <circle r="7" fill="#143224" stroke="#2C5A41" stroke-width="0.8"/>
-    <circle r="2.5" fill="#34D399"/>
-    <g class="mono" text-anchor="middle">
-      <text y="-22" fill="#4ADE80" font-size="8.5" font-weight="700">04</text>
-      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">REGION</text>
-      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Operations Hub</text>
-    </g>
-  </g>
-
-  <!-- 05: HEAD OFFICE -->
-  <g transform="translate(1080, 276)">
-    <circle r="10" fill="none" stroke="#38BDF8" stroke-width="1" class="beacon-hq"/>
-    <circle r="14" fill="#0C1A13" stroke="#38BDF8" stroke-width="1.4"/>
-    <circle r="8" fill="#142B36" stroke="#2E5C6E" stroke-width="0.8"/>
-    <circle r="3" fill="#38BDF8"/>
-    <g class="mono" text-anchor="middle">
-      <text y="-22" fill="#38BDF8" font-size="8.5" font-weight="700">05</text>
-      <text y="26" fill="#F3F4F6" font-size="10.5" font-weight="700" letter-spacing="1">HEAD OFFICE</text>
-      <text y="38" fill="#6B8E7A" font-size="8.5" class="sans">Executive ERP</text>
-    </g>
-  </g>
-
-  <!-- ==================== BOTTOM ARCHITECTURAL CAPABILITY DOCK ==================== -->
-  <g transform="translate(64, 386)" class="mono" font-size="9.5" font-weight="600" letter-spacing="1">
-    <!-- 01 -->
-    <g transform="translate(0, 0)">
-      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
-      <circle cx="16" cy="17" r="2.5" fill="#E3B341"/>
-      <text x="26" y="20.5" fill="#CBD5E1">OPERATIONS</text>
-      <text x="110" y="20.5" fill="#587A67" font-size="8.5">· EDGE</text>
-    </g>
-    <!-- 02 -->
-    <g transform="translate(210, 0)">
-      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
-      <circle cx="16" cy="17" r="2.5" fill="#34D399"/>
-      <text x="26" y="20.5" fill="#CBD5E1">GEOSPATIAL</text>
-      <text x="110" y="20.5" fill="#587A67" font-size="8.5">· GIS</text>
-    </g>
-    <!-- 03 -->
-    <g transform="translate(420, 0)">
-      <rect width="215" height="34" rx="4" fill="#0F281C" stroke="#2C6445" stroke-width="1"/>
-      <circle cx="16" cy="17" r="2.5" fill="#4ADE80"/>
-      <text x="26" y="20.5" fill="#ECFDF5">DATA &amp; APPLIED AI</text>
-    </g>
-    <!-- 04 -->
-    <g transform="translate(650, 0)">
-      <rect width="195" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
-      <circle cx="16" cy="17" r="2.5" fill="#34D399"/>
-      <text x="26" y="20.5" fill="#CBD5E1">ENTERPRISE</text>
-      <text x="112" y="20.5" fill="#587A67" font-size="8.5">· ERP</text>
-    </g>
-    <!-- 05 -->
-    <g transform="translate(860, 0)">
-      <rect width="212" height="34" rx="4" fill="#0A1B13" stroke="#1D3E2E" stroke-width="0.8"/>
-      <circle cx="16" cy="17" r="2.5" fill="#38BDF8"/>
-      <text x="26" y="20.5" fill="#CBD5E1">PLATFORM &amp; SEC</text>
-      <text x="144" y="20.5" fill="#587A67" font-size="8.5">· MESH</text>
-    </g>
-  </g>
-
 </svg>
