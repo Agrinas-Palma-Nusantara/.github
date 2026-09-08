@@ -1,47 +1,45 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07150D,45:0E4A2B,100:0C315A&height=220&section=header&text=AGRINAS%20ENGINEERING&fontSize=42&fontColor=F0F6FC&animation=fadeIn&fontAlignY=38&desc=Teknologi%20untuk%20operasional%20perkebunan&descAlignY=58&descSize=18" alt="Agrinas Engineering" />
+<img src="https://avatars.githubusercontent.com/u/321991492?s=120&v=4" width="76" alt="PT Agrinas Palma Nusantara (Persero)" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=900&color=3FB950&center=true&vCenter=true&repeat=true&width=760&height=40&lines=Operasional+perkebunan;Sistem+enterprise;Geospasial+dan+GIS;Data+platform+dan+analytics;AI+terapan+untuk+workflow+nyata" alt="Area engineering Agrinas" />
+# Agrinas Engineering
 
-**PT Agrinas Palma Nusantara (Persero)**
+**Kami bikin software untuk pekerjaan yang benar-benar jalan di kebun.**
+
+Dari budgeting, aset, dan aktivitas lapangan sampai peta, data, workflow kantor pusat, dan AI.
 
 [Website](https://agrinaspalma.co.id/) · [LinkedIn](https://www.linkedin.com/company/agrinas-palma-nusantara/) · [Instagram](https://www.instagram.com/agrinaspalma/) · [X / Twitter](https://x.com/agrinas_palma)
 
 </div>
 
----
+<img src="./assets/field-signal.svg" width="100%" alt="Agrinas engineering field signal" />
 
-## 01. Engineering untuk operasi nyata
-
-Kami membangun perangkat lunak yang menghubungkan pekerjaan di lapangan dengan proses bisnis, data, dan pengambilan keputusan di kantor pusat.
-
-Fokusnya bukan sekadar digitalisasi formulir. Sistem yang kami bangun harus bisa dipakai dalam workflow nyata, punya jejak data yang jelas, mudah dipantau, dan tetap masuk akal untuk dirawat dalam jangka panjang.
+## Yang kami kerjakan
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### Operasional
-Perencanaan, budgeting, aktivitas lapangan, aset, logistik, dan workflow harian kebun.
+Perencanaan, budgeting, aset, logistik, dan aktivitas lapangan. Hal-hal yang harus tetap jalan walau situasi di lapangan nggak selalu ideal.
 
 ### Geospasial
-Peta, data lahan, analisis spasial, GIS, dan konteks lokasi untuk keputusan operasional.
+Peta, GIS, data lahan, dan konteks spasial. Supaya keputusan nggak cuma berhenti di spreadsheet.
 
 ### Enterprise
-Approval, pelaporan, dokumen, koordinasi lintas unit, dan proses bisnis internal.
+Approval, dokumen, reporting, dan workflow lintas unit. Banyak proses kecil yang kalau nggak disambung dengan benar bisa bikin kerjaan tersendat.
 
 </td>
 <td width="50%" valign="top">
 
 ### Data + AI
-Pipeline data, analytics, document intelligence, pencarian semantik, dan AI terapan.
+Pipeline data, analytics, semantic search, document intelligence, dan AI yang dipakai buat ngurangin kerja manual yang nggak perlu.
 
 ### Platform
-API, cloud, database, observability, CI/CD, security, dan reliability.
+API, cloud, database, observability, CI/CD, security, dan reliability. Bagian yang biasanya nggak kelihatan, tapi kerasa banget kalau bermasalah.
 
-### Prinsipnya
-Lebih sedikit handoff manual. Data lebih konsisten. Proses lebih mudah ditelusuri. Software lebih mudah dirawat.
+### Intinya
+Kami lebih tertarik bikin sistem yang kepakai daripada sekadar kelihatan modern di diagram.
 
 </td>
 </tr>
@@ -49,29 +47,15 @@ Lebih sedikit handoff manual. Data lebih konsisten. Proses lebih mudah ditelusur
 
 ---
 
-## 02. Dari lapangan sampai kantor pusat
+## Dari kebun sampai kantor pusat
 
-```mermaid
-flowchart LR
-    L["Lapangan"] --> E["Estate"] --> D["Distrik"] --> R["Region"] --> H["Kantor Pusat"]
+<img src="./assets/ops-network.svg" width="100%" alt="Jaringan operasional Agrinas dari lapangan sampai kantor pusat" />
 
-    subgraph C["Kapabilitas bersama"]
-      direction LR
-      O["Operasional"]
-      G["Geospasial"]
-      X["Enterprise"]
-      A["Data + AI"]
-      P["Platform + Security"]
-    end
-
-    C -. mendukung .-> D
-```
-
-Satu rantai operasional, satu konteks data, dan visibilitas yang lebih baik di setiap level organisasi.
+Sistemnya beda-beda, tapi alurnya nyambung. Data dari lapangan naik ke level berikutnya, keputusan turun lagi ke operasi, dan semuanya perlu jejak yang jelas.
 
 ---
 
-## 03. Stack yang sering kami pakai
+## Teknologi yang sering kepakai
 
 <div align="center">
 
@@ -83,31 +67,27 @@ Satu rantai operasional, satu konteks data, dan visibilitas yang lebih baik di s
 
 </div>
 
-Teknologi bukan tujuan akhirnya. Kami memilih tool berdasarkan masalah yang diselesaikan, kemudahan operasional, keamanan, dan kemampuan tim untuk merawatnya.
+Stack bisa berubah. Yang kami jaga tetap sama: gampang dipahami, gampang dipantau, aman, dan masuk akal buat dirawat tim.
 
 ---
 
-## 04. Cara kami membangun
+## Cara kami kerja
 
-```text
-domain > abstraksi
-keandalan > kebaruan
-security sejak desain
-ukur apa yang dikirim
-otomatiskan pekerjaan berulang
-rilis -> observasi -> benahi
-```
+- Pahami prosesnya sebelum gambar arsitekturnya.
+- Kalau teknologi yang sederhana cukup, pakai yang sederhana.
+- Security dan observability masuk dari awal, bukan tempelan terakhir.
+- Otomatiskan hal repetitif yang bikin orang buang waktu.
+- Rilis kecil, lihat hasilnya, lalu benahi.
 
-Kami suka teknologi yang jelas gunanya. Eksperimen tetap penting, tapi harus berujung pada software yang lebih sederhana, lebih aman, atau lebih berguna.
-
-> Software yang bagus harus tetap bekerja di Senin pagi, bukan cuma terlihat bagus di diagram arsitektur.
+<img src="./assets/engineering-rhythm.svg" width="100%" alt="Build observe improve" />
 
 ---
 
 <div align="center">
 
-**Perkebunan · Software · Data · Indonesia**
+**PT Agrinas Palma Nusantara (Persero)**  
+Perkebunan · Software · Data · Indonesia
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07150D,45:0E4A2B,100:0C315A&height=90&section=footer" alt="" />
+[agrinaspalma.co.id](https://agrinaspalma.co.id/)
 
 </div>
