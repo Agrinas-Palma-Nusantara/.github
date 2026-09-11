@@ -2,7 +2,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/321991492?s=120&v=4" width="76" alt="PT Agrinas Palma Nusantara (Persero)" />
 
-# Agrinas Engineering
+# Agrinas Software Engineering
 
 **Membangun platform digital untuk mendukung operasi perkebunan yang terhubung, terukur, dan berbasis data.**
 
