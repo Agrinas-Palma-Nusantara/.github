@@ -61,8 +61,8 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: "${{ inputs.role_arn || vars.ROLE_ECR_PUSH_ARN || 'arn:aws:iam::002530139786:role/github-actions-ecr-push' }}"
-          aws-region: "${{ inputs.aws_region || vars.AWS_REGION || 'ap-southeast-3' }}"
+          role-to-assume: ${{ inputs.role_arn || vars.ROLE_ECR_PUSH_ARN }}
+          aws-region: ${{ inputs.aws_region || vars.AWS_REGION }}
 
       - name: Fetch build env dari Secrets Manager
         if: inputs.env_secret_id != ''
