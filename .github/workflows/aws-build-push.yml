@@ -66,6 +66,8 @@ jobs:
           file: ${{ inputs.dockerfile }}
           platforms: linux/amd64
           push: true
+          provenance: false
+          sbom: false
           tags: ${{ steps.ecr.outputs.registry }}/${{ inputs.ecr_repo }}:${{ github.sha }}
 
       - name: Summary
