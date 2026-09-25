@@ -23,6 +23,14 @@ on:
         description: "IAM role ARN (fallback: org variable ROLE_ECR_PUSH_ARN)"
         type: string
         default: ''
+      env_secret_id:
+        description: "Secret (string .env) yang ditulis ke env_file_path sebelum build"
+        type: string
+        default: ''
+      env_file_path:
+        description: Path file env yang ditulis
+        type: string
+        default: secret.env
     outputs:
       digest:
         description: Digest image yang di-push
@@ -35,9 +43,14 @@ permissions:
   contents: read
   id-token: write
 
+concurrency:
+  group: aws-build-push-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     outputs:
       digest: ${{ steps.push.outputs.digest }}
       tag: ${{ github.sha }}
@@ -50,6 +63,13 @@ jobs:
         with:
           role-to-assume: "${{ inputs.role_arn || vars.ROLE_ECR_PUSH_ARN || 'arn:aws:iam::002530139786:role/github-actions-ecr-push' }}"
           aws-region: "${{ inputs.aws_region || vars.AWS_REGION || 'ap-southeast-3' }}"
+
+      - name: Fetch build env dari Secrets Manager
+        if: inputs.env_secret_id != ''
+        run: |
+          aws secretsmanager get-secret-value --secret-id "${{ inputs.env_secret_id }}" \
+            --query SecretString --output text > "${{ inputs.env_file_path }}"
+          echo "build env written: $(wc -l < "${{ inputs.env_file_path }}") baris -> ${{ inputs.env_file_path }}"
 
       - name: Login to Amazon ECR
         id: ecr
@@ -68,6 +88,8 @@ jobs:
           push: true
           provenance: false
           sbom: false
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           tags: ${{ steps.ecr.outputs.registry }}/${{ inputs.ecr_repo }}:${{ github.sha }}
 
       - name: Summary
