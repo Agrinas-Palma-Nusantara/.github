@@ -16,11 +16,11 @@ on:
         type: string
         default: .
       aws_region:
-        description: AWS region (fallback: org variable AWS_REGION)
+        description: "AWS region (fallback: org variable AWS_REGION)"
         type: string
         default: ''
       role_arn:
-        description: IAM role ARN (fallback: org variable ROLE_ECR_PUSH_ARN)
+        description: "IAM role ARN (fallback: org variable ROLE_ECR_PUSH_ARN)"
         type: string
         default: ''
     outputs:
